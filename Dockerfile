@@ -1,4 +1,4 @@
-FROM rocker/shiny
+FROM rocker/shiny:3.5.3
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
         apt-get -y install default-jre-headless && \
