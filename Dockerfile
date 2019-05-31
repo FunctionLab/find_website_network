@@ -14,4 +14,7 @@ RUN R -e "source('https://bioconductor.org/biocLite.R')" \
     igraph \
     shiny \
     && rm -rf /tmp/downloaded_packages/
-
+RUN apt-get update
+RUN apt-get -y install git
+RUN rm -r /srv/shiny-server
+RUN git clone https://github.com/FunctionLab/find_website_network.git  /srv/shiny-server
